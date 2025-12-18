@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page - Supply Chain Lite</title>
+  <style>
+    /* Minimal custom CSS for split screen layout */
+    #userDropdown:hover {
+      background-color: transparent;
+    }
+  </style>
+</head>
+<body class="min-vh-100 d-flex flex-column">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-2">
+        <div class="container-fluid">
+            <!-- Branding -->
+
+            <div class="d-flex align-items-center">
+                <div class="flex-shrink-0 d-flex align-items-center">
+                    <img src="/summence_bw.png" alt="SupplyChainLite Logo" width="36" height="36">
+                    <h1 class="fs-5 fw-bold text-dark ms-3 mt-2">SupplyChainLite</h1>
+                </div>
+            </div>
+            
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Navigation Items -->
+            <div class="collapse navbar-collapse ms-5" id="navbarNav">
+                <ul class="nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        Model
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#addNewModelModal">Add New Model</a></li>
+                        <li><a class="dropdown-item" href="#">Save As</a></li>
+                        <li><a class="dropdown-item" href="#">Rename Model</a></li>
+                        <li><a class="dropdown-item" href="#">Download Model</a></li>
+                        <li><a class="dropdown-item" href="#">Upload Model</a></li>
+                        <li><a class="dropdown-item" href="#">Restore Model</a></li>
+                        <li><a class="dropdown-item" href="#">Hide Model</a></li>
+                        <li><a class="dropdown-item" href="#">Show Model</a></li>
+                        <li><a class="dropdown-item" href="#">Backup Model</a></li>
+                        <li><a class="dropdown-item" href="#">Restore Model</a></li>
+                        <li><a class="dropdown-item" href="#">Upload Excel</a></li>
+                        <li><a class="dropdown-item" href="#">Download Excel</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Active</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link2</a>
+                </li>
+                
+                </ul>
+            </div>
+            
+            <!-- User Profile (Right Side) -->
+            <div class="d-flex align-items-center">
+                <div class="dropdown">
+                    <a class="nav-link text-dark d-flex align-items-center p-0" href="#" role="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="bg-dark text-white rounded-circle d-flex align-items-center justify-content-center me-2" style="width: 40px; height: 40px; font-weight: bold;">
+                            JD
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#resetPasswordModal">Reset Password</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-5 flex-fill d-flex">
+        <!-- Sample Cards -->
+        <div class="row flex-fill">
+            <div class="col-md-3 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="card-title text-center mb-3">Models</h4>
+                        <div class="list-group" id="modelList">
+                            <a href="#" class="list-group-item list-group-item-action active">
+                                Supply Chain Model A
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                Inventory Management
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                Logistics Tracker
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                Warehouse Operations
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                Procurement Model
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                Distribution Network
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-6">
+                
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="card-title text-center mb-3">Tables</h4>
+                        <div class="accordion" id="tablesAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        Orders
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#tablesAccordion">
+                                    <div class="accordion-body">
+                                        <table class="table table-md table-bordered align-middle mb-0">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Acme Co.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Globex</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Inventory
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#tablesAccordion">
+                                    <div class="accordion-body">
+                                        <table class="table table-md table-bordered align-middle mb-0">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Acme Co.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Globex</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Shipments
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#tablesAccordion">
+                                    <div class="accordion-body">
+                                        <table class="table table-md table-bordered align-middle mb-0">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Acme Co.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Globex</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-center py-2 mt-1 border-top">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-center mb-2">
+                <img src="/summence_bw.png" alt="SupplyChainLite Logo" width="32" height="32">
+            </div>
+            <p class="text-white mb-0">Supply Chain Lite</p>
+        </div>
+    </footer>
+
+        <!-- Reset Password Modal -->
+    <div class="modal fade" id="resetPasswordModal" tabindex="-1" aria-labelledby="resetPasswordLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="resetPasswordLabel">Reset Password</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="resetPasswordForm">
+                        <div class="mb-3">
+                            <label for="currentPassword" class="form-label">Current Password</label>
+                            <input type="password" class="form-control" id="currentPassword" placeholder="Enter your current password" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="newPassword" class="form-label">New Password</label>
+                            <input type="password" class="form-control" id="newPassword" placeholder="Enter your new password" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your new password" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-dark ms-auto" id="submitResetBtn">Reset Password</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add New Model Modal -->
+    <div class="modal fade" id="addNewModelModal" tabindex="-1" aria-labelledby="addNewModelLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addNewModelLabel">Add New Model</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addNewModelForm">
+                        <div class="mb-3">
+                            <label for="modelName" class="form-label">Model Name</label>
+                            <input type="text" class="form-control" id="modelName" placeholder="Enter model name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="modelTemplate" class="form-label">Model Template</label>
+                            <select class="form-select" id="modelTemplate" required>
+                                <option selected disabled value="">Select a template</option>
+                                <option value="blank">Blank Template</option>
+                                <option value="supply-chain">Supply Chain Template</option>
+                                <option value="inventory">Inventory Template</option>
+                                <option value="logistics">Logistics Template</option>
+                                <option value="warehouse">Warehouse Management</option>
+                                <option value="procurement">Procurement Template</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="projectName" class="form-label">Project Name</label>
+                            <select class="form-select" id="projectName" required>
+                                <option selected disabled value="">Select a project</option>
+                                <option value="project-1">Project 1</option>
+                                <option value="project-2">Project 2</option>
+                                <option value="project-3">Project 3</option>
+                                <option value="project-4">Project 4</option>
+                                <option value="project-5">Project 5</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-dark ms-auto" id="submitAddModelBtn">Create Model</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/homePage/main.js"></script>
+</body>
+</html>
