@@ -44,7 +44,7 @@
             </div>
 
           <!-- Login Form -->
-          <form class="bg-white p-4">
+          <form class="bg-white p-4" id="loginForm" novalidate>
 
             <!-- Form Header -->
             <div class="mb-4">
@@ -79,17 +79,9 @@
               >
             </div>
 
-            <!-- Remember Me -->
-            <div class="form-check mb-4">
-              <input class="form-check-input" type="checkbox" id="rememberCheck">
-              <label class="form-check-label fw-semibold" for="rememberCheck">
-                Keep me signed in
-              </label>
-            </div>
-
             <!-- Submit Button -->
-            <div class="d-grid mb-4">
-              <a href="dashboard.html" class="btn btn-dark btn-lg">Sign In</a>
+            <div class="d-grid pt-4 mb-4">
+              <button type="submit" class="btn btn-dark btn-lg" id="loginSubmit">Sign In</button>
             </div>
 
           </form>
@@ -108,5 +100,6 @@
   </div>
 
   <script type="module" src="/js/main.js"></script>
+  <script type="module" src="/js/login/main.js"></script>
 </body>
 </html>
